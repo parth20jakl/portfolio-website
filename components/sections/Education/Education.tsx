@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import EducationCard from "./EducationCard";
 import Timeline from "./Timeline";
+import EducationHighlights from "./EducationHighlights";
 import SectionHeading from "@/components/common/SectionHeading";
 
 export default function Education() {
@@ -13,9 +14,9 @@ export default function Education() {
     >
       {/* Background */}
 
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/[0.02] to-transparent" />
+        <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-cyan-500/10 blur-[150px]" />
 
-      <div className="relative mx-auto max-w-7xl px-6">
+        <div className="absolute -right-40 bottom-10 h-[420px] w-[420px] rounded-full bg-violet-500/10 blur-[180px]" />
 
        <SectionHeading
             subtitle="EDUCATION"
@@ -26,7 +27,7 @@ export default function Education() {
         <motion.div
           initial={{
             opacity: 0,
-            y: 40,
+            y: 30,
           }}
           whileInView={{
             opacity: 1,
@@ -36,7 +37,7 @@ export default function Education() {
             once: true,
           }}
           transition={{
-            duration: 0.7,
+            duration: 0.8,
           }}
         >
           <div className="space-y-10">
@@ -45,10 +46,24 @@ export default function Education() {
 
             <Timeline />
 
+            <EducationHighlights />
+        
+                <div className="mx-auto mt-20 max-w-3xl text-center">
+
+                    <p className="leading-8 text-zinc-400">
+
+                        My academic journey has provided me with a strong
+                        foundation in Artificial Intelligence, Machine Learning,
+                        Data Science, and Software Engineering while encouraging
+                        practical implementation through projects, internships,
+                        leadership, and continuous learning.
+
+                    </p>
+
+                </div>
+
             </div>
         </motion.div>
-
-      </div>
     </section>
   );
 }
