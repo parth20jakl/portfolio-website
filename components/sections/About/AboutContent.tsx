@@ -40,6 +40,23 @@ export default function AboutContent() {
       </div>
 
       <AboutStatus />
+      
+      <div className="mt-16 rounded-3xl border border-cyan-500/20 bg-cyan-500/5 p-8">
+        <div className="my-14 h-px w-full bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent" />
+        <h3 className="mb-5 text-2xl font-semibold">
+
+          Career Objective
+
+        </h3>
+
+        <p className="leading-8 text-zinc-400">
+
+          {about.careerObjective}
+
+        </p>
+
+      </div>
+
       <AboutHighlights />
 
       <AboutStats />

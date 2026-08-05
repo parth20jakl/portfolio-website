@@ -23,19 +23,18 @@ export default function AboutCard({
       className="group rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-8 backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/30 hover:shadow-[0_0_40px_rgba(34,211,238,0.08)]"
     >
 
-      <div className="text-4xl">
-
+      <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-500/10 text-4xl">
         {icon}
 
       </div>
 
-      <h3 className="mt-6 text-xl font-semibold">
+      <h3 className="mt-8 text-xl font-semibold">
 
         {title}
 
       </h3>
 
-      <p className="mt-4 leading-7 text-zinc-400">
+      <p className="mt-5 leading-8 text-zinc-400">
 
         {description}
 

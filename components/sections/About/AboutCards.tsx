@@ -42,7 +42,7 @@ const cards = [
 
 export default function AboutCards() {
   return (
-    <div className="grid gap-6 sm:grid-cols-2">
+    <div className="grid gap-8 sm:grid-cols-2">
 
       {cards.map((card) => (
 
