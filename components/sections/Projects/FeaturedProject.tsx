@@ -3,7 +3,7 @@
 import { projects } from "@/data";
 
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 import ProjectButtons from "./ProjectButtons";
 
 import TechBadge from "./TechBadge";
@@ -17,7 +17,21 @@ export default function FeaturedProject() {
   if (!featured) return null;
 
   return (
-    <div
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: 40,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+      }}
+      transition={{
+        duration: 0.6,
+      }}
       className="
       mb-24
       overflow-hidden
@@ -88,6 +102,6 @@ export default function FeaturedProject() {
 
       </div>
 
-    </div>
+    </motion.div>
   );
 }

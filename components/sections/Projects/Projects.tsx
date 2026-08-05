@@ -18,6 +18,15 @@ export default function Projects() {
 
       <div className="relative mx-auto max-w-7xl px-6">
 
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
+          backgroundSize: "42px 42px",
+        }}
+      />
+
         <SectionHeading
           subtitle="FEATURED WORK"
           title="Projects That Define My Journey"
@@ -27,7 +36,18 @@ export default function Projects() {
         <FeaturedProject />
 
         <ProjectGrid />
+          <div className="mt-24 text-center">
 
+            <p className="mx-auto max-w-3xl leading-8 text-zinc-400">
+
+              Every project represents my passion for solving
+              real-world problems using Artificial Intelligence,
+              Machine Learning, Full Stack Development,
+              and modern software engineering principles.
+
+            </p>
+
+          </div>
       </div>
     </section>
   );

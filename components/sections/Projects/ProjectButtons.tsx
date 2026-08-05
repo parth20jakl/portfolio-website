@@ -13,18 +13,40 @@ export default function ProjectButtons({
   demo,
 }: Props) {
   return (
-    <div className="mt-8 flex gap-4">
+    <div className="mt-8 flex flex-wrap gap-4">
+      {github ? (
+        <a
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button variant="outline">
+            <GitBranch className="mr-2 h-4 w-4" />
+            GitHub
+          </Button>
+        </a>
+      ) : (
+        <Button variant="outline" disabled>
+          GitHub
+        </Button>
+      )}
 
-      <Button variant="outline" type="button" onClick={() => window.open(github || "#", "_blank", "noopener,noreferrer")}>
-        <GitBranch className="mr-2 h-4 w-4" />
-        GitHub
-      </Button>
-
-      <Button type="button" onClick={() => window.open(demo || "#", "_blank", "noopener,noreferrer")}>
-        <ExternalLink className="mr-2 h-4 w-4" />
-        Live Demo
-      </Button>
-
+      {demo ? (
+        <a
+          href={demo}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button>
+            <ExternalLink className="mr-2 h-4 w-4" />
+            Live Demo
+          </Button>
+        </a>
+      ) : (
+        <Button disabled>
+          Coming Soon
+        </Button>
+      )}
     </div>
   );
 }

@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 import { Project } from "@/types/portfolio";
-
+import { motion } from "framer-motion";
 import ProjectButtons from "./ProjectButtons";
 import TechBadge from "./TechBadge";
 
@@ -15,7 +15,22 @@ export default function ProjectCard({
   project,
 }: Props) {
   return (
-    <div
+    <motion.div
+      whileHover={{ y: -10 }}
+      initial={{
+        opacity: 0,
+        y: 40,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+      }}
+      transition={{
+        duration: 0.6,
+      }}
       className="
       overflow-hidden
       rounded-3xl
@@ -30,14 +45,17 @@ export default function ProjectCard({
       hover:shadow-[0_0_35px_rgba(34,211,238,0.08)]
       "
     >
-
-      <div className="relative h-56">
+      <div className="group relative h-56 overflow-hidden">
 
         <Image
           src={project.image}
           alt={project.title}
           fill
-          className="object-cover"
+          className="object-cover
+          transition-transform
+          duration-500
+          group-hover:scale-110
+          "
         />
 
       </div>
@@ -76,6 +94,6 @@ export default function ProjectCard({
 
       </div>
 
-    </div>
+    </ motion.div>
   );
 }
