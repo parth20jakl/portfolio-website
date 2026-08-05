@@ -11,6 +11,7 @@ export default function SkillBadge({ skill }: SkillBadgeProps) {
     <motion.span
       whileHover={{
         scale: 1.08,
+        y: -3,
       }}
       whileTap={{
         scale: 0.95,
@@ -27,6 +28,7 @@ export default function SkillBadge({ skill }: SkillBadgeProps) {
       text-cyan-300
       transition-all
       duration-300
+      ease-in-out
       hover:border-cyan-400
       hover:bg-cyan-500/20
       hover:text-white

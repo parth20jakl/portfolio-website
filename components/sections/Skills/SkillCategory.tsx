@@ -26,9 +26,11 @@ export default function SkillCategory({ category }: Props) {
       }}
       transition={{
         duration: 0.6,
+        delay: 0.05,
       }}
       whileHover={{
-        y: -6,
+        y: -8,
+        scale: 1.01,
       }}
       className="
       rounded-3xl
@@ -47,7 +49,7 @@ export default function SkillCategory({ category }: Props) {
 
         <span className="h-3 w-3 rounded-full bg-cyan-400" />
         <span>{category.title}</span>
-        
+
       </h3>
 
       <div className="flex flex-wrap gap-3">
