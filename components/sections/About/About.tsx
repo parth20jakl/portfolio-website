@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 import AboutContent from "./AboutContent";
 import AboutCards from "./AboutCards";
+import SectionHeading from "@/components/common/SectionHeading";
 
 export default function About() {
   return (
@@ -17,24 +18,11 @@ export default function About() {
 
         {/* Section Heading */}
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="mb-20 text-center"
-        >
-          <p className="mb-3 uppercase tracking-[6px] text-cyan-400">
-            ABOUT ME
-          </p>
-
-          <h2 className="text-4xl font-bold md:text-5xl">
-            Passion Meets Intelligence
-          </h2>
-
-          <div className="mx-auto mt-6 h-1 w-28 rounded-full bg-cyan-400" />
-        </motion.div>
-
+    <SectionHeading
+        subtitle="ABOUT ME"
+        title="Passion Meets Intelligence"
+        description="Driven by curiosity and innovation, I specialize in building intelligent systems that solve real-world problems using AI and modern software technologies."
+    />
         <div className="grid items-start gap-16 lg:grid-cols-2">
 
           <AboutContent />

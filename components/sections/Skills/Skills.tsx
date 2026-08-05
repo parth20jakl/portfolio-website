@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import SkillsGrid from "./SkillsGrid";
+import SectionHeading from "@/components/common/SectionHeading";
 
 export default function Skills() {
   return (
@@ -22,24 +23,12 @@ export default function Skills() {
 
         {/* Heading */}
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="mb-20 text-center"
-        >
-          <p className="mb-4 uppercase tracking-[6px] text-cyan-400">
-            SKILLS
-          </p>
-
-          <h2 className="text-4xl font-bold md:text-5xl">
-            Technologies I Work With
-          </h2>
-
-          <div className="mx-auto mt-6 h-1 w-28 rounded-full bg-cyan-400" />
-        </motion.div>
-
+        <SectionHeading
+          subtitle="TECHNICAL EXPERTISE"
+          title="Technologies & Skills"
+          description="A comprehensive toolkit built through academic learning, internships, and real-world projects in Artificial Intelligence, Machine Learning, and Full Stack Development."
+        />
+        
         <SkillsGrid />
 
         <div className="mt-20 text-center">
