@@ -32,7 +32,7 @@ export default function HeroImage() {
       <div className="relative overflow-hidden rounded-full border-4 border-cyan-500/40 shadow-2xl">
 
         <Image
-          src="/images/profile.png"
+          src="/images/profile.JPG"
           alt="Parth Kulkarni"
           width={320}
           height={320}

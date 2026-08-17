@@ -17,7 +17,7 @@ export default function Navbar() {
           <ThemeToggle />
 
           <a
-            href="/resume/resume.pdf"
+            href="/resume/AI_Engineer_Resume.pdf"
             target="_blank"
             rel="noreferrer"
             className="rounded-full bg-cyan-500 px-6 py-2 text-sm font-medium text-white transition hover:bg-cyan-600"

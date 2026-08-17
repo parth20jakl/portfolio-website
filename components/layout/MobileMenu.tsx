@@ -39,7 +39,7 @@ export default function MobileMenu() {
               <ThemeToggle />
 
               <a
-                href="/resume/resume.pdf"
+                href="/resume/AI_Engineer_Resume.pdf"
                 target="_blank"
               >
                 <Button>
