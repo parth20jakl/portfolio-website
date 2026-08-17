@@ -7,6 +7,7 @@ import Projects from "@/components/sections/Projects";
 import Experience from "@/components/sections/Experience"; 
 import Leadership from "@/components/sections/Leadership";
 import Certifications from "@/components/sections/Certifications";
+import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
@@ -28,6 +29,8 @@ export default function Home() {
       <Leadership />
 
       <Certifications />
+
+      <Contact />
 
     </main>
   );
